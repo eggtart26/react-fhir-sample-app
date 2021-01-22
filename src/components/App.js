@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect} from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import Launcher from "./Launcher";
 import Redirect from "./Redirect";
 import fire from '../Login/fire'
 import Login from '../Login/Login'
+import "../App.css"
 
  const App = () => {
     const [user, setUser] = useState('');
@@ -80,10 +81,10 @@ import Login from '../Login/Login'
     }, [])
 
     return (
-        <div>
+        <div className = "App">
             {user ? (
                 <BrowserRouter>
-                <section>
+                <section className = "page">
                 <h2>Welcome to Unite Genomics</h2>
                     <nav>
                         <Route path="/redirect" component={Redirect} />
@@ -114,8 +115,6 @@ import Login from '../Login/Login'
 }
 
 export default App;
-
-//        
 
 
 
